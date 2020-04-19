@@ -1,0 +1,190 @@
+<!--pages/index/index.wxml-->
+<swiper style="height:{{height}}px">
+  <!--首页封面 开始-->
+  <swiper-item>
+    <!--放入一张个人照片-->
+    <image src="" mode="widthFix" class="photo"></image>
+    <view class="cover-info">
+      <text class="cover-name">{{name}}</text>
+      <text class="cover-spell">{{spell}}</text>
+    </view>
+    <view class="big-circle"></view>
+    <view class="medium-circle"></view>
+    <view class="small-circle"></view>
+    <view class="medium2-circle"></view>
+    <view class="medium3-circle"></view>
+    <view class="cover-work">
+      <text class="cover-job">{{job}}</text>
+      <text class="cover-exp">{{exp}}</text>
+    </view>
+    <view class="navigation">
+      我的简历
+      <image src="../../img/arrow-right.png" class="arrow-right"></image>
+    </view>
+  </swiper-item> 
+  <!--首页封面 结束-->
+  <!--首页基本信息 技能要求 学历 开始-->
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">1</view>
+            <text class="section-title">基本资料</text>
+          </view>
+          <view class="column col-2">
+            <text class="info">姓名：{{name}}</text>
+            <text class="info">电话：{{tel}}</text>
+          </view>
+          <view class="column col-2">
+            <text class="info">性别：{{sex}}</text>
+            <text class="info">年龄：{{age}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">邮箱：{{email}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">籍贯：{{address1}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">现住址：{{address}}</text>
+          </view>
+        </view>
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">2</view>
+            <text class="section-title">专业技能</text>
+          </view>
+          <view class="skill-info">
+            <!--专业技能-->
+            <text class="skill-text">一 、熟练使用HTML5、CSS3、Javascript前端常用技术进行开发工作，熟悉页面架构和布局，能够使用SCSS预处理器进行前端开发。</text>
+          </view>
+          <view class="skill-info">
+            <text class="skill-text">二、熟练使用Bootstrap、MUI、ElementUI、Iview、YDUI等UI框架。</text>
+          </view>
+        </view>
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">3</view>
+            <text class="section-title">教育经历</text>
+          </view>
+          <view class="education" wx:for="{{education}}" wx:key="{{item}}">
+            <view class="school">
+              <image src="../../img/icon_school.png" class="icon-school"></image>
+              <text>{{item.school}}</text>
+            </view>
+            <view class="row">
+              <view class="info">
+                <image src="../../img/icon_book.png" class="icon-book"></image>
+                <text>{{item.major}}</text>
+              </view>
+              <view class="info">
+                <image src="../../img/icon_calendar.png" class="icon_calendar"></image>
+                <text>{{item.year}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="page">1/5</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!--首页基本信息 技能要求 学历 结束-->
+  <!--首页工作经历 开始-->
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">4</view>
+            <text class="section-title">工作经历</text>
+          </view>
+          <view class="work" wx:for="{{work}}" wx:key="{{item}}">
+            <view class="company">
+              <image src="../../img/icon_company.png" class="icon-company"></image>
+              <text>{{item.company}}</text>
+            </view>
+            <view class="row">
+              <view class="info">
+                <image src="../../img/icon_job.png" class="icon-job"></image>
+                <text>{{item.job}}</text>
+              </view>
+              <view class="info">
+                <image src="../../img/icon_calendar.png" class="icon_calendar"></image>
+                <text>{{item.year}}</text>
+              </view>
+            </view>
+            <rich-text class="desc" wx:for="{{item.desc}}" wx:key="{{item}}">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <view class="page">2/5</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!--首页工作经历 结束-->
+  <!--首页项目经验 开始-->
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">5</view>
+            <text class="section-title">项目经验</text>
+          </view>
+          <view class="project" wx:for="{{project}}" wx:key="{{item}}">
+            <view class="project-name">
+              <image src="../../img/icon_computer.png" class="icon_computer"></image>
+              <text>{{item.name}}</text>
+            </view>
+            <rich-text class="project-desc">项目描述:</rich-text>
+            <rich-text class="desc">{{item.desc}}</rich-text>
+            <rich-text class="project-desc">项目职责:</rich-text>
+            <rich-text class="duty" wx:for="{{item.duty}}" wx:key="{{item}}">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <view class="page">3/5</view>
+      </view>
+    </scroll-view>
+  </swiper-item> 
+  <!--首页项目经验 结束-->
+  <!--首页自我评价 开始-->
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">6</view>
+            <text class="section-title">自我评价</text>
+          </view>
+          <view class="introduction">
+            <rich-text class="desc">{{introduction}}</rich-text>
+          </view>
+        </view>
+        <view class="page">4/5</view>
+      </view>
+    </scroll-view>
+  </swiper-item> 
+  <!--首页自我评价 结束-->
+  <!--首页项目轮播图展示 开始-->
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">7</view>
+            <text class="section-title">项目展示</text>
+          </view>
+          <swiper class="u-wrp-bnr" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+            <block wx:for="{{bnrUrl}}" wx:for-index="index">
+              <swiper-item>
+                <image src="{{item.url}}" class="u-img-slide" mode="aspectFill"></image>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <view class="page">5/5</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!--首页项目轮播图展示 结束-->
+</swiper>

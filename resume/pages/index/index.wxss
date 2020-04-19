@@ -1,0 +1,257 @@
+/* pages/index/index.wxss */
+/* 图片设置 */
+.photo{
+  display: block;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30%;
+}
+/* 姓名设置 */
+.cover-info{
+  position: absolute;
+  left:20px;
+  top:30px;
+}
+.cover-name{
+  display: block;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1;
+}
+.cover-spell{
+  font-size: 20px;
+  letter-spacing: 1;
+}
+/* 大中小气泡 */
+.big-circle{
+  background-color: rgba(0,165,34,0.7);
+  width:260px;
+  height:260px;
+  border-radius: 130px;
+  position: absolute;
+  left: -150px;
+  top: 110px;
+}
+.medium-circle{
+  background-color: rgba(0,165,34,0.7);
+  width:160px;
+  height:160px;
+  border-radius: 80px;
+  position: absolute;
+  right: -80px;
+  top: 110px;
+}
+.small-circle{
+  background-color: rgba(0,165,34,0.7);
+  width:50px;
+  height:50px;
+  border-radius: 25px;
+  position: absolute;
+  left: -10px;
+  bottom: 110px;
+}
+.medium2-circle{
+  background-color: rgba(0,165,34,0.7);
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+  position: absolute;
+  right: -30px;
+  bottom: 110px;
+}
+.medium3-circle{
+  background-color: rgba(0,165,34,0.7);
+  width:140px;
+  height:140px;
+  border-radius: 70px;
+  position: absolute;
+  left: 150px;
+  bottom:-70px;
+}
+/* 职位和经验 */
+.cover-work{
+  position: absolute;
+  bottom: 180px;
+  background-color: rgba(0,0,0,0.3);
+  padding: 20px 0;
+  text-align: center;
+  width:100%;
+}
+.cover-job{
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.cover-exp{
+  color:#fff;
+  font-size: 20px;
+  display: block;
+}
+/* 右箭头 */
+.navigation{
+  position: absolute;
+  top:40px;
+  right:10px;
+  font-size: 18px;
+}
+.arrow-right{
+  width: 20px;
+  height: 20px;
+  vertical-align: -5px;
+}
+/* 基本信息 */
+.resume{
+  margin:0 20px;
+}
+.section{
+  padding-bottom: 30px;
+}
+.section-info{
+  display: flex;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin:10px 0;
+}
+.section-seq{
+  background-color: #444;
+  width:22px;
+  height:22px;
+  color:#fff;
+  text-align: center;
+  line-height: 22px;
+  font-weight: bold;
+  margin-right:20px;
+  margin-top:3px;
+}
+.section-title{
+  font-size: 20px;
+}
+.column{
+  font-size: 16px;
+  border-bottom: 1px dashed #333;
+  padding: 10px 0;
+}
+.col-2{
+  column-count: 2;
+}
+.info{
+  display: block;
+}
+.col-1{
+  column-count: 1;
+}
+.skill-info{
+  display: flex;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 10px;
+  margin:10px 0;
+}
+.skill-text{
+  font-size: 16px;
+  line-height: 28px;
+}
+.education,.work,.project,.introduction{
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #333;
+}
+.education:last-of-type{
+  border: none;
+}
+.work:last-of-type{
+  border: none;
+}
+.project:last-of-type{
+  border: none;
+}
+.introduction:last-of-type{
+  border: none;
+}
+.school,.company,.project-name{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.icon-school{
+  width:26px;
+  height:26px;
+  vertical-align: -6px;
+  margin-right:5px;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+.icon-book{
+  width:16px;
+  height:16px;
+  vertical-align: -2px;
+  margin-right:3px;
+}
+.icon_calendar{
+  width:17px;
+  height:17px;
+  vertical-align: -2px;
+  margin-right:3px;
+}
+.info{
+  font-size:16px;
+}
+.desc{
+  color:#999;
+  font-size: 16px;
+  line-height: 24px;
+  margin:10px 0;
+  display: block;
+}
+.page{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+/* 工作经历 */
+.icon-company{
+  width:22px;
+  height:22px;
+  vertical-align: -4px;
+  margin-right: 5px;
+}
+.icon-job{
+  width:18px;
+  height:18px;
+  vertical-align: -3px;
+  margin-right: 3px;
+}
+/* 项目经验 */
+.duty{
+  color:#444;
+  font-size: 16px;
+  line-height: 28px;
+  margin:6px 0;
+  display: block;
+}
+.icon_computer{
+  width:26px;
+  height:26px;
+  vertical-align: -6px;
+  margin-right: 5px;
+}
+.project-desc{
+  font-size: 16px;
+  display: block;
+}
+/* 项目展示 */
+.u-wrp-bnr {
+  width: 100%;
+  height: 400px;
+  display: block;
+  position: relative;
+  background: #f0f0f0;
+}
+.u-img-slide {
+  display: block;
+  max-width:100%;
+  height:100%; 
+}
